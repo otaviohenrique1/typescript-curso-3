@@ -1,3 +1,4 @@
+// Decorator de metodo
 export function inspect(
     target: any, // Pode ser um construtor ou prototype da classe
     propertyKey: string,

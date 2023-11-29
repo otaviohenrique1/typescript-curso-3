@@ -1,3 +1,4 @@
+// Decorator de metodo
 export function logarTempoDeExecucao(emSegundos: boolean = false) {
   return function(
     target: any, // Pode ser um construtor ou prototype da classe

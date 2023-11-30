@@ -1,4 +1,6 @@
-export class Negociacao {
+import { Imprimivel } from "../utils/imprimivel.js";
+
+export class Negociacao implements Imprimivel{
   constructor(
     private _data: Date,
     public readonly quantidade: number,
@@ -14,12 +16,13 @@ export class Negociacao {
     return this.quantidade * this.valor;
   }
 
-  public paraTexto(): void {
-    console.log(`
+  public paraTexto(): string {
+    return `
       Data: ${this.data}
       Quantidade: ${this.quantidade}
-      Valor: ${this.valor}
-    `);
+      Valor: ${this.valor
+      }
+    `;
   }
 
   public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
